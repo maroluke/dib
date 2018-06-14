@@ -17,7 +17,8 @@ html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
-  font-family: cerebrisans-regular; }
+  font-family: cerebrisans-regular;
+  margin: auto; }
 
 img {
   width: 100%;

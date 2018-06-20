@@ -75,7 +75,9 @@ blockquote {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  transition: color .3s ease-in-out .1s, background-color .3s ease-in-out .1s, transform .3s ease-in-out .1s; }
+  transition: color .3s ease-in-out .1s, background-color .3s ease-in-out .1s, -webkit-transform .3s ease-in-out .1s;
+  transition: color .3s ease-in-out .1s, background-color .3s ease-in-out .1s, transform .3s ease-in-out .1s;
+  transition: color .3s ease-in-out .1s, background-color .3s ease-in-out .1s, transform .3s ease-in-out .1s, -webkit-transform .3s ease-in-out .1s; }
   .button:after {
     content: "";
     display: block;
@@ -100,8 +102,10 @@ blockquote {
   .button.dark {
     color: white;
     background-color: #353535; }
-    .button.dark:hover:after {
-      box-shadow: 0 2px 20px 2px rgba(0, 0, 0, 0.75); }
+    .button.dark:hover {
+      /*background-color: darken($dark, 100%);*/ }
+      .button.dark:hover:after {
+        box-shadow: 0 2px 20px 2px rgba(0, 0, 0, 0.75); }
   .button.white-lined {
     color: white;
     background-color: #353535;
@@ -330,9 +334,17 @@ nav.main {
       margin-bottom: 0; }
       .section.details ul li:first-child, .section.details ul li:nth-child(2) {
         margin-bottom: 30px; }
-  .section > div .icon {
-    width: 30px;
-    height: 30px; }
+  .section > div {
+    /*text-align: left;*/
+    /* a {*/
+    /*     display: inline-block;*/
+    /*     line-height: 30px;*/
+    /*     height: 30px;*/
+    /*     text-align: left;*/
+    /* }*/ }
+    .section > div .icon {
+      width: 30px;
+      height: 30px; }
   .section .mail {
     margin: 50px 0 20px; }
     .section .mail .icon {
@@ -357,13 +369,27 @@ nav.main {
 
 .next-dates {
   margin: 50px auto; }
-  .next-dates > div > .row > div {
-    background-color: white;
+  .next-dates > div > .row {
     position: relative;
-    border-radius: 4px;
-    padding: 30px;
-    box-shadow: 0 10px 20px 2px rgba(0, 0, 0, 0.25);
-    max-width: calc(50% - 15px); }
+    z-index: 1; }
+    .next-dates > div > .row > div {
+      position: relative;
+      background-color: white;
+      position: relative;
+      border-radius: 4px;
+      padding: 30px;
+      max-width: calc(50% - 15px); }
+      .next-dates > div > .row > div::after {
+        content: "";
+        display: block;
+        width: 95%;
+        height: 50%;
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 2.5%;
+        box-shadow: 0px 2px 20px 0 rgba(0, 0, 0, 0.3);
+        transition: all .3s ease-in-out .1s; }
 
 .newsletter form {
   display: flex; }
@@ -407,17 +433,25 @@ nav.main {
       border: 0; }
   .subscription form .jvFloat .placeHolder {
     width: 200px;
+    /*-webkit-transition: -webkit-transform 150ms, opacity 100ms, visibility 100ms;*/
+    /*transition: transform 150ms, opacity 100ms, visibility 100ms;*/
     transition: all .3s ease-in-out;
+    -webkit-transform: translate(20px, 0);
     transform: translate(20px, 0);
+    -webkit-transform-origin: 60% -50%;
     transform-origin: 60% -50%; }
     .subscription form .jvFloat .placeHolder .input-inner {
       display: block;
       transition: all .3s ease-in-out;
       font-size: 14px; }
     .subscription form .jvFloat .placeHolder.active {
+      -webkit-transform: rotate(90deg);
       transform: rotate(90deg);
+      /*-webkit-transition: -webkit-transform 100ms, opacity 120ms, visibility 120ms;*/
+      /*transition: transform 100ms, opacity 120ms, visibility 120ms;*/
       transition: all .3s ease-in-out; }
       .subscription form .jvFloat .placeHolder.active .input-inner {
+        -webkit-transform: rotate(-90deg);
         transform: rotate(-90deg); }
   .subscription form .course-choices {
     text-align: left;
@@ -441,7 +475,6 @@ nav.main {
       height: 30px;
       z-index: 9;
       cursor: pointer;
-      -webkit-transition: all 0.30s ease-in-out;
       transition: all 0.30s ease-in-out;
       color: #8f8f8f;
       font-size: 24px;
@@ -457,7 +490,6 @@ nav.main {
       top: calc(50% - 15px);
       left: 0;
       z-index: 5;
-      -webkit-transition: border .30s ease-in-out;
       transition: border .30s ease-in-out; }
     .subscription form .course-choices input[type=radio]:checked ~ .check {
       border: 7px solid #353535; }
@@ -606,7 +638,6 @@ nav.main {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster */
-    -webkit-box-shadow: none !important;
     box-shadow: none !important;
     text-shadow: none !important; }
 

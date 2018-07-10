@@ -82,7 +82,7 @@
 
                     <div class="col-lg-12">
                         <input type="radio" id="course-choice2" name="course" value="5er" checked>
-                        <label for="course-choice2">5er Abo CHF 140.–one</label>
+                        <label for="course-choice2">5er Abo CHF 140.–</label>
                         <div class="check"></div>
                     </div>
 

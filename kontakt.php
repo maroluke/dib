@@ -15,7 +15,7 @@
 </header>
 
 <div class="section grey locations">
-    <h2 class="center-text">Standort</h2>
+    <h2 class="center-text">Standorte</h2>
 
     <div class="row center-lg">
         <div class="col-lg-5 location">
@@ -80,8 +80,8 @@
                     <input type="text" placeholder="Telefon Nr." class="label-slide" required>
                 </div>
 
-                <div class="col-lg-12">
-                    <input type="textarea" placeholder="Kommentar (optional)" class="label-slide" required>
+                <div class="col-lg-12 textarea">
+                    <input type="textarea" rows="4" placeholder="Kommentar (optional)" class="label-slide" required>
                 </div>
 
                 <div class="button-wrap center">

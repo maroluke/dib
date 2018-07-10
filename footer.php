@@ -2,7 +2,7 @@
     <div class="row center-lg">
         <div class="col-lg-4">
             <span>desire in balance</span>
-            <h3>by Désirée Isabelle Berger</h3>
+            <h3>by Désirée Isabelle Di Santo</h3>
 
             <div class="mail">
                 <a href="#"><i class="icon">&nbsp;</i>dib@desireinbalance.com</a>

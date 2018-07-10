@@ -1,7 +1,7 @@
 <?php include 'header.php'; ?>
 
 <div class="section grid kursangebote no-intro">
-    <h1 class="center-text xl-text">Kursangebott</h1>
+    <h1 class="center-text xl-text">Kursangebot</h1>
 
     <div class="row center-lg">
         <div class="col-lg-6">
@@ -51,7 +51,7 @@
                 <img src="img/yoga-als-privatlektion.jpg">
 
                 <div class="more">
-                    <h3 class="l-text">Yoga als Privatletkion</h3>
+                    <h3 class="l-text">Yoga als Privatlektion</h3>
 
                     <div class="button-wrap">
                         <a href="#" class="button white-lined">Details</a>

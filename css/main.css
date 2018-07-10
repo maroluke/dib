@@ -431,6 +431,10 @@ nav.main {
     .subscription form input:focus {
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
       border: 0; }
+  .subscription form .textarea {
+    height: 300px; }
+  .subscription form input[type=textarea] {
+    height: 300px; }
   .subscription form .jvFloat .placeHolder {
     width: 200px;
     /*-webkit-transition: -webkit-transform 150ms, opacity 100ms, visibility 100ms;*/
